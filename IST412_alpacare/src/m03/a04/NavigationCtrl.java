@@ -16,6 +16,7 @@ import java.awt.event.WindowEvent;
 public class NavigationCtrl {
     public NavigationUI theNavigationUI = null;
     Person p;
+    NavigationCtrl nc = this;
     
     public NavigationCtrl(Person p){
         this.p = p;
@@ -37,6 +38,17 @@ public class NavigationCtrl {
           public void actionPerformed(ActionEvent e)
           {
              theNavigationUI.frame.dispatchEvent(new WindowEvent(theNavigationUI.frame, WindowEvent.WINDOW_CLOSING));
+          }
+        });
+        
+        theNavigationUI.drugListButton.addActionListener(new ActionListener()
+        {
+          public void actionPerformed(ActionEvent e)
+          {
+             theNavigationUI.frame.setVisible(false);
+            
+             DrugListCntl dLC= new DrugListCntl(nc);
+             
           }
         });
     }

@@ -11,7 +11,7 @@ package m03.a04;
  */
 public class Person {
         String fName, lName, cell, email, type, username;
-        private char[] password;
+        protected char[] password;
         
         public Person(String username, char[] pass){
                 this.fName = "";

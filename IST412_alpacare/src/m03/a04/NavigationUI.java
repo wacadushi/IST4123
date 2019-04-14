@@ -20,6 +20,7 @@ import javax.swing.JPanel;
 public class NavigationUI {
     JButton dashboardButton;
     JButton quitButton;
+    JButton drugListButton;
     JFrame frame;
     
     public NavigationUI(){
@@ -32,11 +33,13 @@ public class NavigationUI {
         
         
         dashboardButton = new JButton("View Profile");
+        drugListButton = new JButton("Search Drugs");
         quitButton = new JButton("Quit");
         
         
         
         panel.add(dashboardButton);
+        panel.add(drugListButton);
         panel.add(quitButton);
         
         
