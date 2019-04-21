@@ -51,6 +51,17 @@ public class NavigationCtrl {
              
           }
         });
+        
+        theNavigationUI.prescriptionButton.addActionListener(new ActionListener()
+        {
+          public void actionPerformed(ActionEvent e)
+          {
+             theNavigationUI.frame.setVisible(false);
+            
+            PrescriptionCtrl pc = new PrescriptionCtrl(theNavigationUI);
+             
+          }
+        });
     }
     
     public void setVisible(){

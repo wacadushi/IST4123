@@ -98,7 +98,7 @@ public class DrugListUI extends JFrame{
                 theDrugListCntl.getNavigationCntl();
             }
         });
-        /**
+        
         addButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 //add stuff
@@ -112,8 +112,8 @@ public class DrugListUI extends JFrame{
             public void actionPerformed(ActionEvent evt) {
                 int selectedTableRow = theDrugTable.getSelectedRow();
                 int selectedModelRow = theDrugTable.convertRowIndexToModel(selectedTableRow);
-                Drug selectedDrug = theDrugCtrl.getDrugList().getListOfDrug().get(selectedModelRow);
-                theDrugCntl.getDrugDetailUI(selectedModelRow, selectedDrug);
+                Drug selectedDrug = theDrugListCntl.getDrugList().getListOfDrugs().get(selectedModelRow);
+                theDrugListCntl.getDrugDetailUI(selectedModelRow, selectedDrug);
                 System.out.println(selectedDrug.toString());
             }
         });
@@ -122,11 +122,11 @@ public class DrugListUI extends JFrame{
             public void actionPerformed(ActionEvent evt) {
                 int selectedTableRow = theDrugTable.getSelectedRow();
                 int selectedModelRow = theDrugTable.convertRowIndexToModel(selectedTableRow);
-                DrugListUI.this.theDrugListCntl.getDrugList().getListOfDrug().remove(selectedModelRow);
-                DrugListUI.this.theDrugListCntl.saveData();
-                theDrugCntl.getDrugTableModel().fireTableDataChanged();
+                DrugListUI.this.theDrugListCntl.getDrugList().getListOfDrugs().remove(selectedModelRow);
+                //DrugListUI.this.theDrugListCntl.saveData();
+                theDrugListCntl.getTableModel().fireTableDataChanged();
             }
         });
-        **/
+        
     }//end of init
 }

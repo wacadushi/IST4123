@@ -50,33 +50,31 @@ public class DrugListCntl {
         theDrugListUI.setVisible(true);
     }
     
-    /**
     public void updateDrug(int row, Drug newDrug){
         theDrugUI.setVisible(false);
-        theDrugList.getListOfDrug().set(row, newDrug);
+        theDrugList.getListOfDrugs().set(row, newDrug);
         theDrugTableModel.fireTableDataChanged();
         theDrugListUI.setVisible(true);
     }
     
     public void saveNewDrug(Drug newDrug){
         theDrugUI.setVisible(false);
-        theDrugList.getListOfDrug().add(newDrug);
+        theDrugList.getListOfDrugs().add(newDrug);
         theDrugTableModel.fireTableDataChanged();
         theDrugListUI.setVisible(true);
     }
-    public void saveData() {
-        SerializedDataCntl.getSerializedDataCntl().writeSerializedDataModel();
-    }
-    
+//    public void saveData() {
+//        SerializedDataCntl.getSerializedDataCntl().writeSerializedDataModel();
+//    }
+//    
     public void getDrugDetailUI(int selectedRowID, Drug theSelectedDrug){
         theDrugListUI.setVisible(false);
         if(theSelectedDrug != null){
-            theDrugUI = new DrugUI1(this, selectedRowID, theSelectedDrug);
+            theDrugUI = new DrugUI(this, selectedRowID, theSelectedDrug);
         }else{
-            theDrugUI = new DrugUI1(this, -1, null);
+            theDrugUI = new DrugUI(this, -1, null);
         }
         theDrugUI.setLocationRelativeTo(null);
         theDrugUI.setVisible(true);
     }
-    * */
 }

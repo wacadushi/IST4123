@@ -21,6 +21,7 @@ public class NavigationUI {
     JButton dashboardButton;
     JButton quitButton;
     JButton drugListButton;
+    JButton prescriptionButton;
     JFrame frame;
     
     public NavigationUI(){
@@ -35,12 +36,13 @@ public class NavigationUI {
         dashboardButton = new JButton("View Profile");
         drugListButton = new JButton("Search Drugs");
         quitButton = new JButton("Quit");
-        
+        prescriptionButton = new JButton("View Prescription");
         
         
         panel.add(dashboardButton);
         panel.add(drugListButton);
         panel.add(quitButton);
+        panel.add(prescriptionButton);
         
         
         frame.add(panel);
